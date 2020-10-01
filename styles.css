@@ -1,0 +1,281 @@
+/* General Settings */
+html, body {
+    width: 100vw;
+    height: 100vh;
+    max-width: 100%;
+    max-height: 100%;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    overflow: clip;
+}
+/*General Settings END */
+
+/* Top Navigation */
+#topnav {
+    display: grid;
+    margin: 5px 40px 0px 15px;
+    grid-template-columns: 50px 50px 1fr 50px 50px 50px 50px;
+    grid-template-rows: 50px;
+    grid-template-areas: 
+    "about store . gmail images apps account";
+}
+
+#about {
+    font-family: arial, sans-serif;
+    text-decoration: none;
+    font-size: 13px;
+    color: rgba(0,0,0,0.87);
+    text-decoration: none;
+    grid-area: about;
+    justify-self: center;
+    align-self: center;
+    text-decoration: none;
+}
+#about:hover {
+    opacity: .85;
+    text-decoration: underline;
+}
+
+#store {
+    font-family: arial, sans-serif;
+    text-decoration: none;
+    font-size: 13px;
+    color: rgba(0,0,0,0.87);
+    text-decoration: none;
+    grid-area: store;
+    justify-self: center;
+    align-self: center;
+}
+#store:hover {
+    opacity: .85;
+    text-decoration: underline;
+}
+
+#gmail {
+    font-family: arial, sans-serif;
+    text-decoration: none;
+    font-size: 13px;
+    color: rgba(0,0,0,0.87);
+    text-decoration: none;
+    grid-area: gmail;
+    justify-self: center;
+    align-self: center;
+    margin-right: 20px;
+}
+#gmail:hover {
+    opacity: .85;
+    text-decoration: underline;
+}
+
+#images {
+    font-family: arial, sans-serif;
+    text-decoration: none;
+    font-size: 13px;
+    color: rgba(0,0,0,0.87);
+    text-decoration: none;
+    grid-area: images;
+    justify-self: center;
+    align-self: center;
+    margin-right: 20px;
+}
+#images:hover {
+    opacity: .85;
+    text-decoration: underline;
+}
+
+#apps {
+    grid-area: apps;
+    justify-self: center;
+    align-self: center;
+    opacity: 0.6;
+    margin-right: 20px;
+}
+#apps:hover {
+    opacity: 1;
+}
+
+#account {
+    font-family: arial, sans-serif;
+    text-decoration: none;
+    font-size: 13px;
+    grid-area: account;
+    justify-self: center;
+    align-self: center;
+    color: white; 
+    height: 28px;
+    width: 69px;
+    border: 1px solid #4285f4;
+    font-weight: bold;
+    background-color: #4683ea;
+    text-align: center;
+    line-height: 28px;
+}
+/* Top Navigation END */
+
+/* Search Bar */
+#main {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 228px 100px 416px;
+    grid-template-areas:
+    ". logo ."
+    ". search-bar ."
+    ". search-buttons .";
+}
+
+#logo {
+    grid-area: logo;
+    justify-self: center;
+    align-self: end;
+}
+
+#search-bar {
+    grid-area: search-bar;
+    height: 40px;
+    width: 530px;
+    color: rgba(0,0,0,.87);
+    background-color: white;
+    border: 1px solid #dcdcdc;
+    border-radius: 28px;
+    padding: 5px 8px 0 16px;
+    justify-self: center;
+    align-self: center;
+    font-size: 16px;
+    padding-left: 50px;
+} 
+#search-bar:hover {
+    box-shadow: 1px 1px 8px 1px #dcdcdc;
+}
+#search-bar:focus-within {
+    box-shadow: 1px 1px 8px 1px #dcdcdc;
+    outline:none;
+} 
+
+#search-buttons {
+    display: flex;
+    grid-area: search-buttons;
+    justify-self: center;
+    align-self: start;
+}
+
+#google-search-button {
+    background-color: #f2f2f2;
+    border: 1px solid #f2f2f2;
+    border-radius: 4px;
+    color: #5F6368;
+    font-family: arial,sans-serif;
+    font-size: 14px;
+    margin: 11px 4px;
+    padding: 0 16px;
+    line-height: 27px;
+    height: 36px;
+    min-width: 54px;
+    text-align: center;
+    cursor: pointer;
+}
+#google-search-button:hover {
+    box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+    background-image: -webkit-linear-gradient(top,#f8f8f8,#f1f1f1);
+    background-color: #f8f8f8;
+    border: 1px solid #c6c6c6;
+    color: #222;
+}
+
+#rdm-search-button {
+    background-color: #f2f2f2;
+    border: 1px solid #f2f2f2;
+    border-radius: 4px;
+    color: #5F6368;
+    font-family: arial,sans-serif;
+    font-size: 14px;
+    margin: 11px 4px;
+    padding: 0 16px;
+    line-height: 27px;
+    height: 36px;
+    min-width: 54px;
+    text-align: center;
+    cursor: pointer;
+}
+#rdm-search-button:hover {
+    box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+    background-image: -webkit-linear-gradient(top,#f8f8f8,#f1f1f1);
+    background-color: #f8f8f8;
+    border: 1px solid #c6c6c6;
+    color: #222;
+}
+/* Search Bar END */
+
+/* Bottom Navigation / Footer */
+#footer {
+    display: grid;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #f2f2f2;
+    grid-template-columns: 100px 100px 128px 1fr 70px 70px 70px;
+    grid-template-rows: 40px;
+    grid-template-areas:
+    "advertising business how-search-works . privacy terms settings";
+}
+
+#advertising {
+    font-family: arial, sans-serif;
+    font-size: 14px;
+    color: #5f6368;
+    grid-area: advertising;
+    justify-self: center;
+    align-self: center;
+    margin-left: 20px;
+    text-decoration: none;
+}
+#business {
+    font-family: arial, sans-serif;
+    font-size: 14px;
+    color: #5f6368;
+    grid-area: business;
+    justify-self: center;
+    align-self: center;
+    text-decoration: none;
+}
+#how-search-works {
+    font-family: arial, sans-serif;
+    font-size: 14px;
+    color: #5f6368;
+    grid-area: how-search-works;
+    justify-self: center;
+    align-self: center;
+    text-decoration: none;
+}
+#privacy {
+    font-family: arial, sans-serif;
+    font-size: 14px;
+    color: #5f6368;
+    grid-area: privacy;
+    justify-self: center;
+    align-self: center;
+    margin-right: 20px;
+    text-decoration: none;
+}
+#terms {
+    font-family: arial, sans-serif;
+    font-size: 14px;
+    color: #5f6368;
+    grid-area: terms;
+    justify-self: center;
+    align-self: center;
+    margin-right: 20px;
+    text-decoration: none;
+}
+#settings {
+    font-family: arial, sans-serif;
+    font-size: 14px;
+    color: #5f6368;
+    grid-area: settings;
+    justify-self: center;
+    align-self: center;
+    margin-right: 30px;
+    text-decoration: none;
+}
+/* Bottom Navigation END / Footer END */
